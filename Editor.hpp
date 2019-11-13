@@ -9,10 +9,10 @@ using namespace std;
 class Editor{
 
     public:
+    Document d;
     
-    Editor(){
-        Document();
-    }
-    void loop(vector<char> v); //waiting for user's input
+    Editor();
+    void loop(); //waiting for user's input
+    //and transfer the input to the right function in Document class
 };
 
