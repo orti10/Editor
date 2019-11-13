@@ -8,8 +8,11 @@ class Document{
 
     public:
     
-    vector<string> doc;
-    Document();
+    vector<string> vec;
+
+    Document(){
+        vector<string> vec;
+    }
 
     void p ();
     // void n ();

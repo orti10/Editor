@@ -3,21 +3,19 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
+using namespace std;  
 
-Document::Document(){
-        vector<string> doc;
-    }  
-void Document::p (){    
-        int i=0;
-        string str;
-        vector<string> doc= {"ortal","hanoch","wow"};
-        cout<<doc.at(i)<<endl;
-        i++;
+
+int index=0;
+
+void Document::p(){   
+        vector<string> vec={"ortal","hanoochhhh","wow"};  
+        cout<<"in p"<<endl;
+        cout<<vec.at(index)<<endl;
+        cout<<"in p2"<<endl;
+        index=index+1;
 }
-// void n(){
-       
-// }
+
 
 
 

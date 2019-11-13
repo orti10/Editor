@@ -15,7 +15,7 @@ Editor::Editor(){
     
     int i=0;
     string command;
-     cout<<"cc";
+    cout<<"cc";
     getline(cin,command); //getting from the user
     cout<<"BB";
     while(command!="Q"){
@@ -34,9 +34,9 @@ Editor::Editor(){
 }
 
 int main(){
-    
     Editor ed;
     ed.loop();
 
+    return 0;
 }
 
