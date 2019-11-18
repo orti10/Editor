@@ -3,30 +3,33 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <bits/stdc++.h> 
+
+
 using namespace std;
 class Document{
 
+    private:
+    string old_search;
+    int index=0;
+    vector<string> vec;
+    
     public:
     
-    vector<string> vec;
 
-    Document(){
-        vector<string> vec;
-    }
+    Document();
 
     void p ();
-    // void n ();
-    // void pr ();// %p
-    // void num ();
-    // void a ();
-    // void i ();
-    // void c ();
-    // void d ();
-    // void t_search (string s);// /text
-    // void r_search (string s); // /
-    // void b_search (string s); // ?text
-    // void s_old_new (string s); // s/old/new
-    // void Q ();
-
+    void n ();
+    void percentP ();// %p
+    void num (int num);
+    void a ();
+    void i ();
+    void c ();
+    void d ();
+    void t_search (string s);// /text
+    void r_search (); // /
+    void b_search (string s); // ?text
+    void s_old_new (string s); // s/old/new
 };
 
