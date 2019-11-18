@@ -13,17 +13,23 @@ Document::Document(){
 
 void Document::a(){
         string txt;
-        vector<string>::iterator it;
-        it=vec.begin();
         getline(cin,txt);
         while(txt[0] != '.'){
-                vec.insert(it+index,txt);
-                index++;
+                vec.insert(end(vec),txt); 
+                index++;    
                 getline(cin,txt);
         }
+       
 }
 void Document::i(){
-        return;
+        vector<string>::iterator it;
+        it=vec.end();
+        string txt;
+        getline(cin,txt);
+        while(txt[0] != '.'){   
+                vec.insert(it-2,txt);
+              // vec.insert(find(begin(vec),end(vec),vec[index]),getline(cin,txt));
+        }
 }
 
 void Document::p(){    

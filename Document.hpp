@@ -10,14 +10,13 @@ using namespace std;
 class Document{
 
     private:
-    string old_search;
-    int index=0;
     vector<string> vec;
+    int index=0;
+    string old_search;
     
     public:
-    
 
-    Document();
+    Document();//constractor
 
     void p ();
     void n ();
