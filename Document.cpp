@@ -11,25 +11,23 @@ Document::Document(){
         vec.push_back("");
 }
 
-void Document::a(){
+void Document::a(){ //after
         string txt;
-        getline(cin,txt);
-        while(txt[0] != '.'){
-                vec.insert(end(vec),txt); 
-                index++;    
-                getline(cin,txt);
-        }
-       
-}
-void Document::i(){
         vector<string>::iterator it;
-        it=vec.end();
-        string txt;
+        
         getline(cin,txt);
-        while(txt[0] != '.'){   
-                vec.insert(it-2,txt);
-              // vec.insert(find(begin(vec),end(vec),vec[index]),getline(cin,txt));
+        cout<<txt<<endl;
+        while(txt[0] != '.'){
+                it=vec.begin();
+                index++;    
+                vec.insert(it+index,txt); 
+                getline(cin,txt);
+                cout<<txt<<endl;
         }
+}
+void Document::i(){//before
+        index--;
+        a();
 }
 
 void Document::p(){    
@@ -41,7 +39,7 @@ void Document::n(){
 }
 
 void Document::percentP(){
-        for(int i=0;i<vec.size();i++){
+        for(int i=1;i<vec.size();i++){
              cout<<vec[i]<<endl;
         }
 }
@@ -50,14 +48,13 @@ void Document::num(int num){
         p();
 }
 void Document::c(){ 
-        string txt;
-        getline(cin,txt);
-        //while(txt[0]!='.')
-        vec[index]=txt;
-        getline(cin,txt);
+       d();
+       i();
 }
 void Document::d(){
-        return;
+        vec.erase (vec.begin()+index);
+        if(index!=1) index--;
+
 }
 void Document::t_search (string s){
        old_search=s;
@@ -104,9 +101,8 @@ void Document::b_search (string s){
 }
 void Document::s_old_new(string s){
         stringstream check1(s); 
-      
-    string old; 
-    string news;
+        string old; 
+        string news;
       
     // Tokenizing w.r.t. space ' ' 
     getline(check1, old, '/');

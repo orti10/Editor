@@ -14,8 +14,8 @@ Editor::Editor(){
  void Editor::loop(){
     
     string command;
-    cout<<"start"<<endl;
     getline(cin,command); //getting from the user
+    cout<<command<<endl;
     while(command!="Q"){
         switch(command[0]){
             case 'p':
@@ -32,6 +32,10 @@ Editor::Editor(){
 
             case 'a':
             d.a();
+            break;
+
+            case 'i':
+            d.i();
             break;
 
             case 'c':
@@ -64,15 +68,15 @@ Editor::Editor(){
             d.num(stoi(command)); //casting string to integer
         }
         getline(cin,command);
+        cout<<command<<endl;
     }
-    
-
 }
 
-int main(){
-    Editor ed;
-    ed.loop();
+// int main(){
+//     Editor ed;
+//     ed.loop();
 
-    return 0;
-}
+//     return 0;
+
+// }
 
