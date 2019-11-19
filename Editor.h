@@ -3,7 +3,9 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "Document.hpp"
+#include "Document.h"
+
+
 using namespace std;
 
 class Editor{
@@ -12,7 +14,6 @@ class Editor{
     Document d;
     
     Editor();
-    void loop(); //waiting for user's input
-    //and transfer the input to the right function in Document class
+    void loop();
 };
 

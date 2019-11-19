@@ -1,8 +1,4 @@
-#include "Document.hpp"
-#include <vector>
-#include <string>
-#include <iostream>
-
+#include "Document.h"
 
 using namespace std;  
 
@@ -11,7 +7,7 @@ Document::Document(){
         vec.push_back("");
 }
 
-void Document::a(){ //after
+void Document::a(){
         string txt;
         vector<string>::iterator it;
         
@@ -25,7 +21,7 @@ void Document::a(){ //after
                 cout<<txt<<endl;
         }
 }
-void Document::i(){//before
+void Document::i(){
         index--;
         a();
 }
@@ -77,6 +73,7 @@ void Document::t_search (string s){
        cout<<"?"<<endl;
 }
 void Document::r_search (){
+      index++;
       t_search(old_search);
 }
 
@@ -103,12 +100,7 @@ void Document::s_old_new(string s){
         stringstream check1(s); 
         string old; 
         string news;
-      
-    // Tokenizing w.r.t. space ' ' 
-    getline(check1, old, '/');
-    getline(check1, news, '/');
-    vec[index].replace(vec[index].find(old),old.size(),news);
+        getline(check1, old, '/');
+        getline(check1, news, '/');
+        vec[index].replace(vec[index].find(old),old.size(),news);
 }
-
-
-

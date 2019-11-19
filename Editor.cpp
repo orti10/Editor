@@ -1,9 +1,4 @@
-#include "Editor.hpp"
-#include "Document.hpp"
-#include "Document.cpp"
-#include <vector>
-#include <string>
-#include <iostream>
+#include "Editor.h"
 
 using namespace std;
 
@@ -14,7 +9,7 @@ Editor::Editor(){
  void Editor::loop(){
     
     string command;
-    getline(cin,command); //getting from the user
+    getline(cin,command);
     cout<<command<<endl;
     while(command!="Q"){
         switch(command[0]){
@@ -46,9 +41,9 @@ Editor::Editor(){
             d.d();
             break;
 
-            case '/': // "/text" else "/"
+            case '/':
             if(command.size()>1){
-                d.t_search(command.substr(1)); //skip the first char "/"
+                d.t_search(command.substr(1));
             }
             else{
                 d.r_search();
@@ -65,18 +60,9 @@ Editor::Editor(){
             
         }
         if(command[0]>'0' && command[0]<'9'){
-            d.num(stoi(command)); //casting string to integer
+            d.num(stoi(command));
         }
         getline(cin,command);
         cout<<command<<endl;
     }
 }
-
-// int main(){
-//     Editor ed;
-//     ed.loop();
-
-//     return 0;
-
-// }
-

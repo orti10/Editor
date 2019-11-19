@@ -16,19 +16,19 @@ class Document{
     
     public:
 
-    Document();//constractor
+    Document();
 
     void p ();
     void n ();
-    void percentP ();// %p
+    void percentP ();
     void num (int num);
     void a ();
     void i ();
     void c ();
     void d ();
-    void t_search (string s);// /text
-    void r_search (); // /
-    void b_search (string s); // ?text
-    void s_old_new (string s); // s/old/new
+    void t_search (string s);
+    void r_search ();
+    void b_search (string s);
+    void s_old_new (string s);
 };
 
