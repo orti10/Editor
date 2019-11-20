@@ -24,6 +24,7 @@ void Document::a(){
 void Document::i(){
         index--;
         a();
+        index++;
 }
 
 void Document::p(){    
@@ -45,7 +46,7 @@ void Document::num(int num){
 }
 void Document::c(){ 
        d();
-       i();
+       a();
 }
 void Document::d(){
         vec.erase (vec.begin()+index);

@@ -59,7 +59,7 @@ Editor::Editor(){
             break;
             
         }
-        if(command[0]>'0' && command[0]<'9'){
+        if(command[0]>'0' && command[0]<='9'){
             d.num(stoi(command));
         }
         getline(cin,command);
